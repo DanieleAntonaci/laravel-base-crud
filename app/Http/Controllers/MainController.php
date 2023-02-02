@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Santo;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function index() {
 
-        return view('pages.app');
+        $santos = Santo::all();
+        $data = [
+            'santos' => $santos,
+        ];
+        return view('pages.app', $data);
     }
 }
