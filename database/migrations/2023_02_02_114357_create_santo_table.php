@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('santo', function (Blueprint $table) {
+        Schema::create('santos', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name', 32);
+            $table->string('last_name', 32);
+            $table->string('place_of_birth', 32);
+            $table->date('date_of_blessing') ->nullable(true);
+            $table->smallInteger('num_miracle')-> unsigned();
+
             $table->timestamps();
         });
     }
