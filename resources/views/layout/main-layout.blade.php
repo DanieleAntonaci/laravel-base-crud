@@ -4,6 +4,7 @@
       @include('components.head')
     </head>
     <body>
-        @yield('title')
+        @yield('list')
+        @yield('santo')
     </body>
 </html>

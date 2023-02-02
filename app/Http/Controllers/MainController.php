@@ -15,4 +15,15 @@ class MainController extends Controller
         ];
         return view('pages.app', $data);
     }
+
+    public function show($id) {
+
+        $santo = Santo::find($id);
+
+        $data = [
+            'santo' => $santo
+        ];
+
+        return view('pages.santo', $data);
+    }
 }
