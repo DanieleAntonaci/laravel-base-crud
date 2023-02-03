@@ -10,13 +10,12 @@ class MainController extends Controller
     public function index() {
 
         $santos = Santo::all();
-        $data = [
-            'santos' => $santos,
-        ];
-        return view('pages.app', $data);
+        
+        return view('pages.app', compact('santos'));
     }
 
-    public function show($id) {
+    // funzione di ricerca
+    public function santoShow($id) {
 
         $santo = Santo::find($id);
 
@@ -25,5 +24,14 @@ class MainController extends Controller
         ];
 
         return view('pages.santo', $data);
+    }
+
+    // funzione di cancellazione
+    public function santoDelete($id){
+        $santo = Santo::find($id);
+        $santo -> delete();
+
+        return redirect()-> route('index');
+
     }
 }
