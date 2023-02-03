@@ -6,5 +6,6 @@
     <body>
         @yield('list')
         @yield('santo')
+        @yield('form')
     </body>
 </html>

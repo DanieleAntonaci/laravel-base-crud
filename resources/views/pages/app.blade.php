@@ -2,6 +2,7 @@
 
 @section('list')
     <h1>Santi</h1>
+    <a href="{{ route('santo.create')}}">add santo</a>
     <ul>
 
         @foreach ($santos as $santo)
