@@ -22,12 +22,12 @@ Route::get('/santo/show/{id}', [MainController::class, 'santoShow'])
     ->name('santo.show');
 
 // route cancellazione
-Route::get('/santo/delete/{id}', [MainController::class, 'santoDelete'])
-    ->name('santo.delete');
+Route::get('/santo/destroy/{id}', [MainController::class, 'santoDestroy'])
+    ->name('santo.destroy');
 
 // route creazionhe
 Route::get('/santo/create', [MainController::class,'santoCreate'])
     ->name('santo.create');
     
-Route::post('/santo/add', [MainController::class , 'santoAdd'])
-    ->name('santo.add');
+Route::post('/santo/store', [MainController::class , 'santoStore'])
+    ->name('santo.store');

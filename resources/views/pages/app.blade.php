@@ -14,7 +14,7 @@
                 Num Miracle: {{ $santo -> num_miracle}}
                 
             </a>
-            <a href="{{ route('santo.delete', ['id' => $santo -> id]) }}">X</a>
+            <a href="{{ route('santo.destroy', ['id' => $santo -> id]) }}">X</a>
         </li>
         @endforeach
     </ul>

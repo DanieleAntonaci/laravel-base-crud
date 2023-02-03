@@ -4,7 +4,7 @@
 <div >
     <h1>CREATE SANTO</h1>
 
-    <form action="{{ route('santo.add') }}" method="post">
+    <form action="{{ route('santo.store') }}" method="post">
         @csrf
 
         <label for="name">name</label>

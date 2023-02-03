@@ -27,7 +27,7 @@ class MainController extends Controller
     }
 
     // funzione di cancellazione
-    public function santoDelete($id){
+    public function santoDestroy($id){
         $santo = Santo::find($id);
         $santo -> delete();
 
@@ -39,7 +39,7 @@ class MainController extends Controller
         return view('pages.santoCreate');
     }
 
-    public function santoAdd(Request $request){
+    public function santoStore(Request $request){
         $data = $request->all();
 
         $newSanto = new Santo();
