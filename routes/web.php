@@ -17,17 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[MainController::class,'index'])
     ->name('index');
 
-// route ricerca
+    // route ricerca
 Route::get('/santo/show/{id}', [MainController::class, 'santoShow'])
     ->name('santo.show');
 
-// route cancellazione
+    // route cancellazione
 Route::get('/santo/destroy/{id}', [MainController::class, 'santoDestroy'])
     ->name('santo.destroy');
 
-// route creazionhe
+    // route form
 Route::get('/santo/create', [MainController::class,'santoCreate'])
     ->name('santo.create');
     
+    // route creazionhe
 Route::post('/santo/store', [MainController::class , 'santoStore'])
     ->name('santo.store');

@@ -35,10 +35,12 @@ class MainController extends Controller
 
     }
 
+    // funzione di reindirizzazmento al form
     public function santoCreate(){
         return view('pages.santoCreate');
     }
-
+    
+    // funzione di inserimento
     public function santoStore(Request $request){
         $data = $request->all();
 

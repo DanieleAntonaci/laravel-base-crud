@@ -2,6 +2,7 @@
 
 @section('list')
     <h1>Santi</h1>
+    {{-- link per il form di aggiunta --}}
     <a href="{{ route('santo.create')}}">add santo</a>
     <ul>
 
@@ -14,6 +15,7 @@
                 Num Miracle: {{ $santo -> num_miracle}}
                 
             </a>
+            {{-- cancellazione elemento --}}
             <a href="{{ route('santo.destroy', ['id' => $santo -> id]) }}">X</a>
         </li>
         @endforeach
